@@ -12,13 +12,17 @@ if n is impossible to achieve, return 0
 def minOperations(n):
     """
     Function minOperations
-    Returns an integer
+    Calculates the fewest number of operations needed to get n H characters.
+    
+    Returns:
+        An integer representing the minimum number of operations needed.
+        Returns 0 if n is impossible to achieve.
     """
     result = 0
     x = 2
     while n > 1:
         while n % x == 0:
             result += x
-            n /= x
+            n //= x
         x += 1
     return result
