@@ -24,13 +24,18 @@ def minOperations(n):
     
     result = 0
     x = 2
-    
+
+    print(f"Starting with n={n}, result={result}")
+
     while n > 1:
         # Divide n by x as long as it is divisible
         while n % x == 0:
             result += x
             n //= x
+            # Debug: After each division
+            print(f"Dividing by {x}, updated n={n}, result={result}")
         # Move to the next factor
         x += 1
     
+    print(f"Final result for n={n} is {result}")
     return result
