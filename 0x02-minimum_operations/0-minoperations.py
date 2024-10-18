@@ -8,7 +8,6 @@ Returns an integer
 if n is impossible to achieve, return 0
 """
 
-
 def minOperations(n):
     """
     Function minOperations
@@ -18,11 +17,16 @@ def minOperations(n):
         An integer representing the minimum number of operations needed.
         Returns 0 if n is impossible to achieve.
     """
+    if n < 2:
+        return 0
+
     result = 0
     x = 2
+    
     while n > 1:
         while n % x == 0:
             result += x
-            n //= x
+            n //= x  # Use integer division to avoid float issues
         x += 1
+    
     return result
