@@ -2,6 +2,12 @@
 import sys
 import signal
 
+"""
+This script reads log entries from stdin and computes the total file size
+and counts of HTTP status codes. It prints the statistics after every 10 lines
+or upon receiving a keyboard interrupt.
+"""
+
 # Global variables to store metrics
 total_file_size = 0
 status_codes_count = {
